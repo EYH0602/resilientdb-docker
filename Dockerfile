@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y bazel
 
     # compile and setup ResilientDB
 WORKDIR /app
-RUN git clone https://github.com/resilientdb/resilientdb.git
+RUN git clone https://github.com/apache/incubator-resilientdb resilientdb
 WORKDIR /app/resilientdb
 RUN sh INSTALL.sh
 RUN bazel build service/tools/kv/api_tools/kv_service_tools
